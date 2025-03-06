@@ -28,3 +28,10 @@ if [ -d "$FRPC_DIR" ]; then
 
 	cd $PKG_PATH && echo "luci-app-frpc has been fixed!"
 fi
+
+#精简Passwall
+PW_FILE=$(find ../feeds/luci/ -maxdepth 3 -type f -wholename "*/applications/luci-app-passwall/Makefile")
+if [ -f "$PW_FILE" ]; then
+	sed -i 's/+geoview //g' $PW_FILE
+	cd $PKG_PATH && echo "passwall has been fixed!"
+fi
