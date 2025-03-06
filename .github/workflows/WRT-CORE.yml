@@ -164,9 +164,6 @@ jobs:
           cd ./wrt/
 
           cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt >> .config
-          if [[ $WRT_CONFIG != 'K2P' ]]; then
-            cat $GITHUB_WORKSPACE/Config/GENERAL.txt >> .config
-          fi
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
 
@@ -235,16 +232,16 @@ jobs:
 
             全系带开源硬件加速，别问了！
 
-            内核版本：${{env.WRT_KVER}}
+            内核版本: ${{env.WRT_KVER}}
 
-            WIFI名称：${{env.WRT_SSID}}
-            WIFI密码：${{env.WRT_WORD}}
+            WIFI名称: ${{env.WRT_SSID}}
+            WIFI密码: ${{env.WRT_WORD}}
 
-            源码：${{env.WRT_REPO}}
-            分支：${{env.WRT_BRANCH}}
-            提交：${{env.WRT_HASH}}
+            源码: ${{env.WRT_REPO}}
+            分支: ${{env.WRT_BRANCH}}
+            提交: ${{env.WRT_HASH}}
 
-            配置：${{env.WRT_CONFIG}}
-            平台：${{env.WRT_TARGET}}
-            地址：${{env.WRT_IP}}
-            密码：${{env.WRT_PW}}
+            配置: ${{env.WRT_CONFIG}}
+            平台: ${{env.WRT_TARGET}}
+            地址: ${{env.WRT_IP}}
+            密码: ${{env.WRT_PW}}
